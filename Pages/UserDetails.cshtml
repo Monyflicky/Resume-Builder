@@ -1,0 +1,63 @@
+@page
+@model UserDetailsModel
+@* @{
+Layout = "~/Pages/Shared/_Layout_two.cshtml";
+} *@
+@{
+    ViewData["Title"] = "Input page";
+}
+
+
+
+<form method="post">
+    <div class="d-flex flex-row container fill-height">
+        <div class="p-5 flex-grow-1 justify-content-between">
+                <h4 class="font-weight-normal text-primary">What’s the best way for employers to contact you?</h4>
+                <h6 class="font-weight-normal text-secondary">We suggest including an email and phone number.</h6>
+                <div class="d-flex flex-row mt-4">
+                        <div class="flex-grow-1">
+                            <label for="exampleFormControlInput1" class="form-label">First Name</label>
+                            <input type="text" asp-for="user.firstName" class="form-control rounded-0" id="exampleFormControlInput1" placeholder=""/>
+                        </div>
+                        <div class="ml-2 flex-grow-1">
+                            <label for="exampleFormControlInput2" class="form-label">Last Name</label>
+                            <input type="text" asp-for="user.lastName" class="form-control rounded-0" id="exampleFormControlInput2" placeholder=""/>
+                        </div>
+                </div>
+                <div class="mt-4">
+                    <label for="exampleFormControlInput3" class="form-label">Profession</label>
+                    <input type="text" asp-for="user.profession" class="form-control rounded-0" id="exampleFormControlInput3" placeholder=""/>
+                </div>
+                <div class="d-flex flex-row justify-content-between mt-4">
+                        <div class="flex-grow-1">
+                            <label for="exampleFormControlInput4" class="form-label">City</label>
+                            <input type="text" asp-for="user.city" class="form-control rounded-0" id="exampleFormControlInput4" placeholder=""/>
+                        </div>
+                        <div class="d-flex flex-row ml-2">
+                                <div class="">
+                                    <label for="exampleFormControlInput5" class="form-label">State/Province</label>
+                                    <input type="text" asp-for="user.province" class="form-control rounded-0" id="exampleFormControlInput5" placeholder=""/>
+                                </div>
+                                <div class="ml-1">
+                                    <label for="exampleFormControlInput6" class="form-label">Zip Code</label>
+                                    <input type="text" asp-for="user.postalcode" class="form-control rounded-0" id="exampleFormControlInput6" placeholder=""/>
+                                </div> 
+                        </div>
+                </div>
+                <div class="d-flex flex-row mt-4">
+                        <div class="flex-grow-1">
+                            <label for="exampleFormControlInput7" class="form-label">Phone</label>
+                            <input type="text" asp-for="user.phoneNumber" class="form-control rounded-0" id="exampleFormControlInput7" placeholder=""/>
+                        </div>
+                        <div class="ml-2 flex-grow-1">
+                            <label for="exampleFormControlInput8" class="form-label">Email address</label>
+                            <input type="email" asp-for="user.emailAddress" class="form-control rounded-0" id="exampleFormControlInput8" placeholder=""/>
+                        </div>
+                </div>
+        </div>
+        <div class="d-flex flex-column p-2 border justify-content-between flex-grow-1">
+                GFG Flexbox 2
+                <button type="submit" class="btn btn-primary btn-sm m-5" style="border-radius: 15px;">Preview</button>
+        </div> 
+    </div>
+</form>
