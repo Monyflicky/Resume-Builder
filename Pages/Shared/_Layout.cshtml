@@ -16,7 +16,7 @@
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
@@ -25,6 +25,10 @@
                             <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
                         </li>
                     </ul>
+                    <div class="navbar-nav">
+                        @* <button type="submit" class="btn btn-sm px-4 py-2 bg-body" style="border-radius: 20px; color: #3f86fa; font-size: 16px; font-weight: bold; box-shadow: 0 0 20px #3f86fa">MY ACCOUNT</button> *@
+                         <a class="btn btn-sm px-4 py-2 bg-body" style="border-radius: 20px; color: #3f86fa; font-size: 16px; font-weight: bold; box-shadow: 0 0 20px #3f86fa" asp-page="./Sign_in" asp-route-id="">MY ACCOUNT</a>
+                    </div>
                 </div>
             </div>
         </nav>
